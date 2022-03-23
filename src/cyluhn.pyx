@@ -1,3 +1,6 @@
+from __future__ import print_function
+from builtins import range
+
 from libc.stdlib cimport rand, malloc, free, srand
 from libc.time cimport time
 from cpython.version cimport PY_MAJOR_VERSION
@@ -99,3 +102,18 @@ def _get_rand_numeric_str(ndigits):
             return c_str[:ndigits].decode()
     finally:
         free(c_str)
+
+
+def _cli_generate():
+    import argparse
+
+    parser = argparse.ArgumentParser(
+        description='Generate serial numbers with valid Luhn check digit')
+    parser.add_argument('-d', '--ndigits', required=True, type=int,
+                        help='Number of digits in each generated serial number')
+    parser.add_argument('-n', '--nserials', required=True, type=int,
+                        help='Number of serial numbers to generate')
+
+    args = parser.parse_args()
+    for i in range(args.nserials):
+        print(generate_valid_luhn_str(args.ndigits))
