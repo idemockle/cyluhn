@@ -1,7 +1,9 @@
-import random
-import string
+from libc.stdlib cimport rand, malloc, free, srand
+from libc.time cimport time
 
-from libc.stdlib cimport div, div_t, rand, malloc, free
+
+cdef char ZERO_CHAR = 48
+srand(time(NULL))
 
 
 def verify(string):
@@ -11,19 +13,19 @@ def verify(string):
     return (_checksum(string) == 0)
 
 
-def generate_digit(string):
+def get_check_digit(string):
     """
     Generate the Luhn check digit to append to the provided string.
     """
     return (10 - _checksum(string + '0')) % 10
 
 
-def append(string):
+def append_check_digit(string):
     """
     Append Luhn check digit to the end of the provided string. Returns a new
     string with the appended digit.
     """
-    return '%s%d' % (string, generate_digit(string))
+    return '%s%d' % (string, get_check_digit(string))
 
 
 def generate_valid_luhn_str(ndigits):
@@ -32,8 +34,7 @@ def generate_valid_luhn_str(ndigits):
     :param ndigits:
     :return:
     """
-    # return append(''.join(random.choices(string.digits, k=ndigits - 1)))
-    return append(get_rand_numeric_str(ndigits - 1))
+    return append_check_digit(_get_rand_numeric_str(ndigits - 1))
 
 
 def _checksum(string):
@@ -48,15 +49,13 @@ def _checksum(string):
 
 
 cdef int cchecksum(char* string, Py_ssize_t stringsize):
-    cdef div_t even_div
     cdef bint is_odd = 1
     cdef int odd_sum = 0
     cdef int even_sum = 0
-    cdef char zero = 48 # '0' char
     cdef int cur_digit
 
     for i in range(stringsize - 1, -1, -1):
-        cur_digit = string[i] - zero
+        cur_digit = string[i] - ZERO_CHAR
         # print(cur_digit)
         if cur_digit < 0 or cur_digit > 9:
             return -1
@@ -64,8 +63,10 @@ cdef int cchecksum(char* string, Py_ssize_t stringsize):
         if is_odd:
             odd_sum += cur_digit
         else:
-            even_div = div(2 * cur_digit, 10)
-            even_sum += even_div.quot + even_div.rem
+            cur_digit *= 2
+            if cur_digit > 9:
+                cur_digit -= 9
+            even_sum += cur_digit
 
         is_odd = not is_odd
         # print('odd = %d; even = %d' % (odd_sum, even_sum))
@@ -74,20 +75,20 @@ cdef int cchecksum(char* string, Py_ssize_t stringsize):
 
 
 cdef char* cget_rand_numeric_str(int ndigits):
-    cdef char * out = <char*> malloc((ndigits + 1) * sizeof(char))
+    cdef char* out = <char*> malloc((ndigits + 1) * sizeof(char))
 
     for i in range(ndigits):
-        out[i] = rand() % 10 + 48
+        out[i] = rand() % 10 + ZERO_CHAR
     out[ndigits] = 0
 
     return out
 
 
-def get_rand_numeric_str(ndigits):
+def _get_rand_numeric_str(ndigits):
     cdef char* c_str
 
     try:
         c_str = cget_rand_numeric_str(ndigits)
-        return c_str[:ndigits].decode('utf-8')
+        return c_str[:ndigits].decode()
     finally:
         free(c_str)
