@@ -1,5 +1,6 @@
 from libc.stdlib cimport rand, malloc, free, srand
 from libc.time cimport time
+from cpython.version cimport PY_MAJOR_VERSION
 
 
 cdef char ZERO_CHAR = 48
@@ -42,7 +43,10 @@ def _checksum(string):
     Compute the Luhn checksum for the provided string of digits. Note this
     assumes the check digit is in place.
     """
-    res = cchecksum(bytes(string, 'ascii'), len(string))
+    if PY_MAJOR_VERSION > 2:
+        string = bytes(string, 'ascii')
+
+    res = cchecksum(string, len(string))
     if res == -1:
         raise ValueError('Input must be numeric')
     return res
