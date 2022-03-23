@@ -93,6 +93,9 @@ def _get_rand_numeric_str(ndigits):
 
     try:
         c_str = cget_rand_numeric_str(ndigits)
-        return c_str[:ndigits].decode()
+        if PY_MAJOR_VERSION < 3:
+            return c_str[:ndigits]
+        else:
+            return c_str[:ndigits].decode()
     finally:
         free(c_str)
