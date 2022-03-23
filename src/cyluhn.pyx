@@ -15,7 +15,7 @@ def generate_digit(string):
     """
     Generate the Luhn check digit to append to the provided string.
     """
-    return (10 - _checksum(string)) % 10
+    return (10 - _checksum(string + '0')) % 10
 
 
 def append(string):
@@ -33,7 +33,7 @@ def generate_valid_luhn_str(ndigits):
     :return:
     """
     # return append(''.join(random.choices(string.digits, k=ndigits - 1)))
-    return append(get_rand_numeric_str(ndigits))
+    return append(get_rand_numeric_str(ndigits - 1))
 
 
 def _checksum(string):
@@ -74,7 +74,7 @@ cdef int cchecksum(char* string, Py_ssize_t stringsize):
 
 
 cdef char* cget_rand_numeric_str(int ndigits):
-    cdef char * out = < char * > malloc((ndigits + 1) * sizeof(char))
+    cdef char * out = <char*> malloc((ndigits + 1) * sizeof(char))
 
     for i in range(ndigits):
         out[i] = rand() % 10 + 48
