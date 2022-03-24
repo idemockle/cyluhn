@@ -10,6 +10,8 @@ setup(
     name='cyluhn',
     version='0.1.0',
     description='Fast library to validate and generate check digits using the Luhn algorithm',
+    long_description='file: README.md',
+    long_description_content_type='text/markdown',
     ext_modules=[Extension(name='cyluhn', sources=['src/cyluhn.c'])],
     entry_points={'console_scripts': ['cyluhn-generate=cyluhn:_cli_generate']},
     author='Ian Kent',
