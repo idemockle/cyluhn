@@ -13,6 +13,11 @@ srand(time(NULL))
 def verify(string):
     """
     Check if the provided string of digits satisfies the Luhn checksum.
+
+    :param string: Numeric string
+    :type string: str
+    :return: True if the string passes Luhn check
+    :rtype: bool
     """
     return (_checksum(string) == 0)
 
@@ -20,6 +25,11 @@ def verify(string):
 def get_check_digit(string):
     """
     Generate the Luhn check digit to append to the provided string.
+
+    :param string: Numeric string
+    :type string: str
+    :return: Check digit calculated from input
+    :rtype: int
     """
     return (10 - _checksum(string + '0')) % 10
 
@@ -28,6 +38,11 @@ def append_check_digit(string):
     """
     Append Luhn check digit to the end of the provided string. Returns a new
     string with the appended digit.
+
+    :param string: Numeric string
+    :type string: str
+    :return: Input string with calculated check digit appended
+    :rtype: str
     """
     return '%s%d' % (string, get_check_digit(string))
 
@@ -35,17 +50,16 @@ def append_check_digit(string):
 def generate_valid_luhn_str(ndigits):
     """
     Generate a random numeric string of length `ndigits` with a valid luhn check digit
-    :param ndigits:
-    :return:
+
+    :param ndigits: Length of string to generate
+    :type ndigits: int
+    :return: Numeric string of length `ndigits` with a valid Luhn check digit
+    :rtype: str
     """
     return append_check_digit(_get_rand_numeric_str(ndigits - 1))
 
 
 def _checksum(string):
-    """
-    Compute the Luhn checksum for the provided string of digits. Note this
-    assumes the check digit is in place.
-    """
     if PY_MAJOR_VERSION > 2:
         string = bytes(string, 'ascii')
 
