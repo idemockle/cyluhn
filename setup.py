@@ -8,7 +8,7 @@ from setuptools import Extension
 
 setup(
     name='cyluhn',
-    version='0.1.0',
+    version='0.1.1',
     description='Fast library to validate and generate check digits using the Luhn algorithm',
     long_description='file: README.md',
     long_description_content_type='text/markdown',

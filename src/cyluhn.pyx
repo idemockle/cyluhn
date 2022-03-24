@@ -31,7 +31,16 @@ def get_check_digit(string):
     :return: Check digit calculated from input
     :rtype: int
     """
-    return (10 - _checksum(string + '0')) % 10
+    if PY_MAJOR_VERSION > 2:
+        string = bytes(string + '0', 'ascii')
+    else:
+        string += '0'
+
+    return cget_check_digit(string, len(string))
+
+
+cdef int cget_check_digit(char* cstring, Py_ssize_t stringsize):
+    return (10 - cchecksum(cstring, stringsize)) % 10
 
 
 def append_check_digit(string):
