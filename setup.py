@@ -10,5 +10,14 @@ setup(
     author_email='iank1226@yahoo.com',
     url='https://github.com/idemockle/cyluhn',
     install_requires=['future; python_version < "3"'],
+    python_requires='>=2.7',
+    license='MIT',
+    classifiers=['Development Status :: 4 - Beta',
+                 'Programming Language :: Cython',
+                 'Programming Language :: Python :: Implementation :: CPython',
+                 'Programming Language :: Python :: 2.7',
+                 'Programming Language :: Python :: 3',
+                 'License :: OSI Approved :: MIT License',
+                 'Operating System :: OS Independent'],
     zip_safe=False
 )
