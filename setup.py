@@ -1,4 +1,5 @@
-from pathlib import Path
+import os
+import io
 
 from setuptools import setup
 from setuptools import Extension
@@ -7,12 +8,14 @@ from setuptools import Extension
 # Once the c code is generated, you can install with `pip install .`
 # To generate source distribution, run `python setup.py sdist`
 
+with io.open(os.path.abspath(os.path.join(__file__, '..', 'README.md')), 'r', encoding='utf-8') as f:
+    readme_text = f.read()
 
 setup(
     name='cyluhn',
     version='0.1.2',
     description='Fast library to validate and generate check digits using the Luhn algorithm',
-    long_description=(Path(__file__).parent / "README.md").read_text(),
+    long_description=readme_text,
     long_description_content_type='text/markdown',
     ext_modules=[Extension(name='cyluhn', sources=['src/cyluhn.c'])],
     entry_points={'console_scripts': ['cyluhn-generate=cyluhn:_cli_generate']},
