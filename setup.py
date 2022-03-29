@@ -1,6 +1,7 @@
+from pathlib import Path
+
 from setuptools import setup
 from setuptools import Extension
-from Cython.Build import cythonize
 
 # Before installation/distribution run `cythonize -i src/cyluhn.pyx`
 # Once the c code is generated, you can install with `pip install .`
@@ -9,11 +10,11 @@ from Cython.Build import cythonize
 
 setup(
     name='cyluhn',
-    version='0.1.1',
+    version='0.1.2',
     description='Fast library to validate and generate check digits using the Luhn algorithm',
-    long_description='file: README.md',
+    long_description=(Path(__file__).parent / "README.md").read_text(),
     long_description_content_type='text/markdown',
-    ext_modules=cythonize([Extension(name='cyluhn', sources=['src/cyluhn.pyx'])]),
+    ext_modules=[Extension(name='cyluhn', sources=['src/cyluhn.c'])],
     entry_points={'console_scripts': ['cyluhn-generate=cyluhn:_cli_generate']},
     author='Ian Kent',
     author_email='iank1226@yahoo.com',
