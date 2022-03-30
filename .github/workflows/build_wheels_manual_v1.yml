@@ -3,52 +3,48 @@ name: Build (Manual)
 on: [workflow_dispatch]
 
 jobs:
-#   build_wheels:
-#     name: Build wheels on ${{ matrix.os }}
-#     runs-on: ${{ matrix.os }}
-#     strategy:
-#       matrix:
-#         os: [ubuntu-20.04, windows-2019, macos-10.15]
-
-#     steps:
-#       - uses: actions/checkout@v2
-
-#       - name: Build wheels
-#         uses: pypa/cibuildwheel@v2.3.1
-#         env:
-#           CIBW_SKIP: pp* # Why would you use a cython-based library in PyPy?
-
-#       - uses: actions/upload-artifact@v2
-#         with:
-#           path: ./wheelhouse/*.whl
-
-#   build_wheels_older_versions_non_win_plus_py35_win:
-#     # Building of Python 2.7 wheels by cibuildwheel in Windows requires separate config and is in separate job below
-#     name: Build old Python version wheels on ${{ matrix.os }}
-#     runs-on: ${{ matrix.os }}
-#     strategy:
-#       matrix:
-#         os: [ ubuntu-20.04, windows-2019, macos-10.15 ]
-
-#     steps:
-#       - uses: actions/checkout@v2
-
-#       - name: Build wheels
-#         uses: pypa/cibuildwheel@v1.12.0
-#         env:
-#           CIBW_BUILD: '{cp27*,cp35*}'
-
-#       - uses: actions/upload-artifact@v2
-#         with:
-#           path: ./wheelhouse/*.whl
-
-
-  build_wheels_py27_win:
-    name: Build Python 2.7 wheels on ${{ matrix.os }}
+  build_wheels:
+    name: Build wheels on ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [windows-2019]
+        os: [ubuntu-20.04, windows-2019, macos-10.15]
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Build wheels
+        uses: pypa/cibuildwheel@v2.3.1
+        env:
+          CIBW_SKIP: pp* # Why would you use a cython-based library in PyPy?
+
+      - uses: actions/upload-artifact@v2
+        with:
+          path: ./wheelhouse/*.whl
+
+  build_wheels_older_versions_non_win_plus_py35_win:
+    # Building of Python 2.7 wheels by cibuildwheel in Windows requires separate config and is in separate job below
+    name: Build old Python version wheels on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ ubuntu-20.04, windows-2019, macos-10.15 ]
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Build wheels
+        uses: pypa/cibuildwheel@v1.12.0
+        env:
+          CIBW_BUILD: '{cp27*,cp35*}'
+
+      - uses: actions/upload-artifact@v2
+        with:
+          path: ./wheelhouse/*.whl
+
+  build_wheels_py27_win:
+    name: Build Python 2.7 wheels on Windows
+    runs-on: windows-2019
 
     steps:
       - uses: actions/checkout@v2
