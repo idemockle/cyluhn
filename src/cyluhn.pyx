@@ -1,16 +1,15 @@
 from __future__ import print_function
-from builtins import range
 
 from libc.stdlib cimport rand, malloc, free, srand
 from libc.time cimport time
 from cpython.version cimport PY_MAJOR_VERSION
 
 
+__version__ = '0.1.3'
+
+
 cdef char ZERO_CHAR = 48
 srand(time(NULL))
-
-
-__version__ = '0.1.3'
 
 
 def verify(string):
@@ -86,9 +85,8 @@ cdef int cchecksum(char* string, Py_ssize_t stringsize):
     cdef int odd_sum = 0
     cdef int even_sum = 0
     cdef int cur_digit
-    cdef int i = stringsize - 1
 
-    while i > -1:
+    for i in range(stringsize - 1, -1, -1):
         cur_digit = string[i] - ZERO_CHAR
         # print(cur_digit)
         if cur_digit < 0 or cur_digit > 9:
@@ -104,18 +102,15 @@ cdef int cchecksum(char* string, Py_ssize_t stringsize):
 
         is_odd = not is_odd
         # print('odd = %d; even = %d' % (odd_sum, even_sum))
-        i -= 1
 
     return (odd_sum + even_sum) % 10
 
 
 cdef char* cget_rand_numeric_str(int ndigits):
     cdef char* out = <char*> malloc((ndigits + 1) * sizeof(char))
-    cdef int i = 0
 
-    while i < ndigits:
+    for i in range(ndigits):
         out[i] = rand() % 10 + ZERO_CHAR
-        i += 1
     out[ndigits] = 0
 
     return out
@@ -145,5 +140,9 @@ def _cli_generate():
                         help='Number of serial numbers to generate')
 
     args = parser.parse_args()
-    for i in range(args.nserials):
+
+    # Using while loop to avoid list construction from range() in Python 2
+    i = 0
+    while i < args.nserials:
         print(generate_valid_luhn_str(args.ndigits))
+        i += 1
