@@ -83,8 +83,9 @@ cdef int cchecksum(char* string, Py_ssize_t stringsize):
     cdef int odd_sum = 0
     cdef int even_sum = 0
     cdef int cur_digit
+    cdef int i = stringsize - 1
 
-    for i in range(stringsize - 1, -1, -1):
+    while i > -1:
         cur_digit = string[i] - ZERO_CHAR
         # print(cur_digit)
         if cur_digit < 0 or cur_digit > 9:
@@ -100,15 +101,18 @@ cdef int cchecksum(char* string, Py_ssize_t stringsize):
 
         is_odd = not is_odd
         # print('odd = %d; even = %d' % (odd_sum, even_sum))
+        i -= 1
 
     return (odd_sum + even_sum) % 10
 
 
 cdef char* cget_rand_numeric_str(int ndigits):
     cdef char* out = <char*> malloc((ndigits + 1) * sizeof(char))
+    cdef int i = 0
 
-    for i in range(ndigits):
+    while i < ndigits:
         out[i] = rand() % 10 + ZERO_CHAR
+        i += 1
     out[ndigits] = 0
 
     return out
