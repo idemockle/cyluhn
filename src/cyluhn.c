@@ -6,7 +6,7 @@
         "depends": [],
         "name": "cyluhn",
         "sources": [
-            "C:\\Users\\Ian\\Documents\\repositories\\learning-cython\\src\\cyluhn.pyx"
+            "/home/iankent/Repositories/cyluhn/src/cyluhn.pyx"
         ]
     },
     "module_name": "cyluhn"
@@ -908,7 +908,7 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "src\\cyluhn.pyx",
+  "src/cyluhn.pyx",
 };
 
 /*--- Type declarations ---*/
@@ -1302,6 +1302,7 @@ static const char __pyx_k_main[] = "__main__";
 static const char __pyx_k_name[] = "__name__";
 static const char __pyx_k_test[] = "__test__";
 static const char __pyx_k_type[] = "type";
+static const char __pyx_k_0_1_3[] = "0.1.3";
 static const char __pyx_k_ascii[] = "ascii";
 static const char __pyx_k_c_str[] = "c_str";
 static const char __pyx_k_print[] = "print";
@@ -1312,6 +1313,7 @@ static const char __pyx_k_parser[] = "parser";
 static const char __pyx_k_string[] = "string";
 static const char __pyx_k_verify[] = "verify";
 static const char __pyx_k_ndigits[] = "--ndigits";
+static const char __pyx_k_version[] = "__version__";
 static const char __pyx_k_argparse[] = "argparse";
 static const char __pyx_k_builtins[] = "builtins";
 static const char __pyx_k_checksum[] = "_checksum";
@@ -1325,7 +1327,7 @@ static const char __pyx_k_description[] = "description";
 static const char __pyx_k_add_argument[] = "add_argument";
 static const char __pyx_k_cli_generate[] = "_cli_generate";
 static const char __pyx_k_ArgumentParser[] = "ArgumentParser";
-static const char __pyx_k_src_cyluhn_pyx[] = "src\\cyluhn.pyx";
+static const char __pyx_k_src_cyluhn_pyx[] = "src/cyluhn.pyx";
 static const char __pyx_k_get_check_digit[] = "get_check_digit";
 static const char __pyx_k_append_check_digit[] = "append_check_digit";
 static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
@@ -1336,6 +1338,7 @@ static const char __pyx_k_Generate_serial_numbers_with_val[] = "Generate serial 
 static const char __pyx_k_Number_of_digits_in_each_generat[] = "Number of digits in each generated serial number";
 static const char __pyx_k_Number_of_serial_numbers_to_gene[] = "Number of serial numbers to generate";
 static PyObject *__pyx_kp_s_0;
+static PyObject *__pyx_kp_s_0_1_3;
 static PyObject *__pyx_n_s_ArgumentParser;
 static PyObject *__pyx_kp_s_Generate_serial_numbers_with_val;
 static PyObject *__pyx_kp_s_Input_must_be_numeric;
@@ -1380,6 +1383,7 @@ static PyObject *__pyx_n_s_string;
 static PyObject *__pyx_n_s_test;
 static PyObject *__pyx_n_s_type;
 static PyObject *__pyx_n_s_verify;
+static PyObject *__pyx_n_s_version;
 static PyObject *__pyx_pf_6cyluhn_verify(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_string); /* proto */
 static PyObject *__pyx_pf_6cyluhn_2get_check_digit(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_string); /* proto */
 static PyObject *__pyx_pf_6cyluhn_4append_check_digit(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_string); /* proto */
@@ -1408,7 +1412,7 @@ static PyObject *__pyx_codeobj__15;
 static PyObject *__pyx_codeobj__17;
 /* Late includes */
 
-/* "cyluhn.pyx":13
+/* "cyluhn.pyx":16
  * 
  * 
  * def verify(string):             # <<<<<<<<<<<<<<
@@ -1442,7 +1446,7 @@ static PyObject *__pyx_pf_6cyluhn_verify(CYTHON_UNUSED PyObject *__pyx_self, PyO
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("verify", 0);
 
-  /* "cyluhn.pyx":22
+  /* "cyluhn.pyx":25
  *     :rtype: bool
  *     """
  *     return (_checksum(string) == 0)             # <<<<<<<<<<<<<<
@@ -1450,7 +1454,7 @@ static PyObject *__pyx_pf_6cyluhn_verify(CYTHON_UNUSED PyObject *__pyx_self, PyO
  * 
  */
   __Pyx_XDECREF(__pyx_r);
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_checksum); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 22, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_checksum); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 25, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -1464,17 +1468,17 @@ static PyObject *__pyx_pf_6cyluhn_verify(CYTHON_UNUSED PyObject *__pyx_self, PyO
   }
   __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_3, __pyx_v_string) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_v_string);
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 22, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 25, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyInt_EqObjC(__pyx_t_1, __pyx_int_0, 0, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 22, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_EqObjC(__pyx_t_1, __pyx_int_0, 0, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 25, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "cyluhn.pyx":13
+  /* "cyluhn.pyx":16
  * 
  * 
  * def verify(string):             # <<<<<<<<<<<<<<
@@ -1495,7 +1499,7 @@ static PyObject *__pyx_pf_6cyluhn_verify(CYTHON_UNUSED PyObject *__pyx_self, PyO
   return __pyx_r;
 }
 
-/* "cyluhn.pyx":25
+/* "cyluhn.pyx":28
  * 
  * 
  * def get_check_digit(string):             # <<<<<<<<<<<<<<
@@ -1532,7 +1536,7 @@ static PyObject *__pyx_pf_6cyluhn_2get_check_digit(CYTHON_UNUSED PyObject *__pyx
   __Pyx_RefNannySetupContext("get_check_digit", 0);
   __Pyx_INCREF(__pyx_v_string);
 
-  /* "cyluhn.pyx":34
+  /* "cyluhn.pyx":37
  *     :rtype: int
  *     """
  *     if PY_MAJOR_VERSION > 2:             # <<<<<<<<<<<<<<
@@ -1542,16 +1546,16 @@ static PyObject *__pyx_pf_6cyluhn_2get_check_digit(CYTHON_UNUSED PyObject *__pyx
   __pyx_t_1 = ((PY_MAJOR_VERSION > 2) != 0);
   if (__pyx_t_1) {
 
-    /* "cyluhn.pyx":35
+    /* "cyluhn.pyx":38
  *     """
  *     if PY_MAJOR_VERSION > 2:
  *         string = bytes(string + '0', 'ascii')             # <<<<<<<<<<<<<<
  *     else:
  *         string += '0'
  */
-    __pyx_t_2 = PyNumber_Add(__pyx_v_string, __pyx_kp_s_0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 35, __pyx_L1_error)
+    __pyx_t_2 = PyNumber_Add(__pyx_v_string, __pyx_kp_s_0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 38, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 35, __pyx_L1_error)
+    __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 38, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_GIVEREF(__pyx_t_2);
     PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_2);
@@ -1559,13 +1563,13 @@ static PyObject *__pyx_pf_6cyluhn_2get_check_digit(CYTHON_UNUSED PyObject *__pyx
     __Pyx_GIVEREF(__pyx_n_s_ascii);
     PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_n_s_ascii);
     __pyx_t_2 = 0;
-    __pyx_t_2 = __Pyx_PyObject_Call(((PyObject *)(&PyBytes_Type)), __pyx_t_3, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 35, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_Call(((PyObject *)(&PyBytes_Type)), __pyx_t_3, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 38, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF_SET(__pyx_v_string, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "cyluhn.pyx":34
+    /* "cyluhn.pyx":37
  *     :rtype: int
  *     """
  *     if PY_MAJOR_VERSION > 2:             # <<<<<<<<<<<<<<
@@ -1575,7 +1579,7 @@ static PyObject *__pyx_pf_6cyluhn_2get_check_digit(CYTHON_UNUSED PyObject *__pyx
     goto __pyx_L3;
   }
 
-  /* "cyluhn.pyx":37
+  /* "cyluhn.pyx":40
  *         string = bytes(string + '0', 'ascii')
  *     else:
  *         string += '0'             # <<<<<<<<<<<<<<
@@ -1583,14 +1587,14 @@ static PyObject *__pyx_pf_6cyluhn_2get_check_digit(CYTHON_UNUSED PyObject *__pyx
  *     return cget_check_digit(string, len(string))
  */
   /*else*/ {
-    __pyx_t_2 = PyNumber_InPlaceAdd(__pyx_v_string, __pyx_kp_s_0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 37, __pyx_L1_error)
+    __pyx_t_2 = PyNumber_InPlaceAdd(__pyx_v_string, __pyx_kp_s_0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 40, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF_SET(__pyx_v_string, __pyx_t_2);
     __pyx_t_2 = 0;
   }
   __pyx_L3:;
 
-  /* "cyluhn.pyx":39
+  /* "cyluhn.pyx":42
  *         string += '0'
  * 
  *     return cget_check_digit(string, len(string))             # <<<<<<<<<<<<<<
@@ -1598,15 +1602,15 @@ static PyObject *__pyx_pf_6cyluhn_2get_check_digit(CYTHON_UNUSED PyObject *__pyx
  * 
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_4 = __Pyx_PyObject_AsWritableString(__pyx_v_string); if (unlikely((!__pyx_t_4) && PyErr_Occurred())) __PYX_ERR(0, 39, __pyx_L1_error)
-  __pyx_t_5 = PyObject_Length(__pyx_v_string); if (unlikely(__pyx_t_5 == ((Py_ssize_t)-1))) __PYX_ERR(0, 39, __pyx_L1_error)
-  __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_f_6cyluhn_cget_check_digit(__pyx_t_4, __pyx_t_5)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 39, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_AsWritableString(__pyx_v_string); if (unlikely((!__pyx_t_4) && PyErr_Occurred())) __PYX_ERR(0, 42, __pyx_L1_error)
+  __pyx_t_5 = PyObject_Length(__pyx_v_string); if (unlikely(__pyx_t_5 == ((Py_ssize_t)-1))) __PYX_ERR(0, 42, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_f_6cyluhn_cget_check_digit(__pyx_t_4, __pyx_t_5)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 42, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "cyluhn.pyx":25
+  /* "cyluhn.pyx":28
  * 
  * 
  * def get_check_digit(string):             # <<<<<<<<<<<<<<
@@ -1627,7 +1631,7 @@ static PyObject *__pyx_pf_6cyluhn_2get_check_digit(CYTHON_UNUSED PyObject *__pyx
   return __pyx_r;
 }
 
-/* "cyluhn.pyx":42
+/* "cyluhn.pyx":45
  * 
  * 
  * cdef int cget_check_digit(char* cstring, Py_ssize_t stringsize):             # <<<<<<<<<<<<<<
@@ -1640,7 +1644,7 @@ static int __pyx_f_6cyluhn_cget_check_digit(char *__pyx_v_cstring, Py_ssize_t __
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("cget_check_digit", 0);
 
-  /* "cyluhn.pyx":43
+  /* "cyluhn.pyx":46
  * 
  * cdef int cget_check_digit(char* cstring, Py_ssize_t stringsize):
  *     return (10 - cchecksum(cstring, stringsize)) % 10             # <<<<<<<<<<<<<<
@@ -1650,7 +1654,7 @@ static int __pyx_f_6cyluhn_cget_check_digit(char *__pyx_v_cstring, Py_ssize_t __
   __pyx_r = __Pyx_mod_long((10 - __pyx_f_6cyluhn_cchecksum(__pyx_v_cstring, __pyx_v_stringsize)), 10);
   goto __pyx_L0;
 
-  /* "cyluhn.pyx":42
+  /* "cyluhn.pyx":45
  * 
  * 
  * cdef int cget_check_digit(char* cstring, Py_ssize_t stringsize):             # <<<<<<<<<<<<<<
@@ -1664,7 +1668,7 @@ static int __pyx_f_6cyluhn_cget_check_digit(char *__pyx_v_cstring, Py_ssize_t __
   return __pyx_r;
 }
 
-/* "cyluhn.pyx":46
+/* "cyluhn.pyx":49
  * 
  * 
  * def append_check_digit(string):             # <<<<<<<<<<<<<<
@@ -1698,7 +1702,7 @@ static PyObject *__pyx_pf_6cyluhn_4append_check_digit(CYTHON_UNUSED PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("append_check_digit", 0);
 
-  /* "cyluhn.pyx":56
+  /* "cyluhn.pyx":59
  *     :rtype: str
  *     """
  *     return '%s%d' % (string, get_check_digit(string))             # <<<<<<<<<<<<<<
@@ -1706,7 +1710,7 @@ static PyObject *__pyx_pf_6cyluhn_4append_check_digit(CYTHON_UNUSED PyObject *__
  * 
  */
   __Pyx_XDECREF(__pyx_r);
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_get_check_digit); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 56, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_get_check_digit); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 59, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -1720,10 +1724,10 @@ static PyObject *__pyx_pf_6cyluhn_4append_check_digit(CYTHON_UNUSED PyObject *__
   }
   __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_3, __pyx_v_string) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_v_string);
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 56, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 59, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 56, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 59, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_INCREF(__pyx_v_string);
   __Pyx_GIVEREF(__pyx_v_string);
@@ -1731,14 +1735,14 @@ static PyObject *__pyx_pf_6cyluhn_4append_check_digit(CYTHON_UNUSED PyObject *__
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_2, 1, __pyx_t_1);
   __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyString_Format(__pyx_kp_s_s_d, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 56, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyString_Format(__pyx_kp_s_s_d, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 59, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "cyluhn.pyx":46
+  /* "cyluhn.pyx":49
  * 
  * 
  * def append_check_digit(string):             # <<<<<<<<<<<<<<
@@ -1759,7 +1763,7 @@ static PyObject *__pyx_pf_6cyluhn_4append_check_digit(CYTHON_UNUSED PyObject *__
   return __pyx_r;
 }
 
-/* "cyluhn.pyx":59
+/* "cyluhn.pyx":62
  * 
  * 
  * def generate_valid_luhn_str(ndigits):             # <<<<<<<<<<<<<<
@@ -1796,7 +1800,7 @@ static PyObject *__pyx_pf_6cyluhn_6generate_valid_luhn_str(CYTHON_UNUSED PyObjec
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("generate_valid_luhn_str", 0);
 
-  /* "cyluhn.pyx":68
+  /* "cyluhn.pyx":71
  *     :rtype: str
  *     """
  *     return append_check_digit(_get_rand_numeric_str(ndigits - 1))             # <<<<<<<<<<<<<<
@@ -1804,11 +1808,11 @@ static PyObject *__pyx_pf_6cyluhn_6generate_valid_luhn_str(CYTHON_UNUSED PyObjec
  * 
  */
   __Pyx_XDECREF(__pyx_r);
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_append_check_digit); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 68, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_append_check_digit); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 71, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_get_rand_numeric_str); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 68, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_get_rand_numeric_str); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 71, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_PyInt_SubtractObjC(__pyx_v_ndigits, __pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 68, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyInt_SubtractObjC(__pyx_v_ndigits, __pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 71, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __pyx_t_6 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_4))) {
@@ -1823,7 +1827,7 @@ static PyObject *__pyx_pf_6cyluhn_6generate_valid_luhn_str(CYTHON_UNUSED PyObjec
   __pyx_t_3 = (__pyx_t_6) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_6, __pyx_t_5) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 68, __pyx_L1_error)
+  if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 71, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_t_4 = NULL;
@@ -1839,14 +1843,14 @@ static PyObject *__pyx_pf_6cyluhn_6generate_valid_luhn_str(CYTHON_UNUSED PyObjec
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 68, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 71, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "cyluhn.pyx":59
+  /* "cyluhn.pyx":62
  * 
  * 
  * def generate_valid_luhn_str(ndigits):             # <<<<<<<<<<<<<<
@@ -1870,7 +1874,7 @@ static PyObject *__pyx_pf_6cyluhn_6generate_valid_luhn_str(CYTHON_UNUSED PyObjec
   return __pyx_r;
 }
 
-/* "cyluhn.pyx":71
+/* "cyluhn.pyx":74
  * 
  * 
  * def _checksum(string):             # <<<<<<<<<<<<<<
@@ -1907,7 +1911,7 @@ static PyObject *__pyx_pf_6cyluhn_8_checksum(CYTHON_UNUSED PyObject *__pyx_self,
   __Pyx_RefNannySetupContext("_checksum", 0);
   __Pyx_INCREF(__pyx_v_string);
 
-  /* "cyluhn.pyx":72
+  /* "cyluhn.pyx":75
  * 
  * def _checksum(string):
  *     if PY_MAJOR_VERSION > 2:             # <<<<<<<<<<<<<<
@@ -1917,14 +1921,14 @@ static PyObject *__pyx_pf_6cyluhn_8_checksum(CYTHON_UNUSED PyObject *__pyx_self,
   __pyx_t_1 = ((PY_MAJOR_VERSION > 2) != 0);
   if (__pyx_t_1) {
 
-    /* "cyluhn.pyx":73
+    /* "cyluhn.pyx":76
  * def _checksum(string):
  *     if PY_MAJOR_VERSION > 2:
  *         string = bytes(string, 'ascii')             # <<<<<<<<<<<<<<
  * 
  *     res = cchecksum(string, len(string))
  */
-    __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 73, __pyx_L1_error)
+    __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 76, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_INCREF(__pyx_v_string);
     __Pyx_GIVEREF(__pyx_v_string);
@@ -1932,13 +1936,13 @@ static PyObject *__pyx_pf_6cyluhn_8_checksum(CYTHON_UNUSED PyObject *__pyx_self,
     __Pyx_INCREF(__pyx_n_s_ascii);
     __Pyx_GIVEREF(__pyx_n_s_ascii);
     PyTuple_SET_ITEM(__pyx_t_2, 1, __pyx_n_s_ascii);
-    __pyx_t_3 = __Pyx_PyObject_Call(((PyObject *)(&PyBytes_Type)), __pyx_t_2, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 73, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_Call(((PyObject *)(&PyBytes_Type)), __pyx_t_2, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 76, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF_SET(__pyx_v_string, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "cyluhn.pyx":72
+    /* "cyluhn.pyx":75
  * 
  * def _checksum(string):
  *     if PY_MAJOR_VERSION > 2:             # <<<<<<<<<<<<<<
@@ -1947,18 +1951,18 @@ static PyObject *__pyx_pf_6cyluhn_8_checksum(CYTHON_UNUSED PyObject *__pyx_self,
  */
   }
 
-  /* "cyluhn.pyx":75
+  /* "cyluhn.pyx":78
  *         string = bytes(string, 'ascii')
  * 
  *     res = cchecksum(string, len(string))             # <<<<<<<<<<<<<<
  *     if res == -1:
  *         raise ValueError('Input must be numeric')
  */
-  __pyx_t_4 = __Pyx_PyObject_AsWritableString(__pyx_v_string); if (unlikely((!__pyx_t_4) && PyErr_Occurred())) __PYX_ERR(0, 75, __pyx_L1_error)
-  __pyx_t_5 = PyObject_Length(__pyx_v_string); if (unlikely(__pyx_t_5 == ((Py_ssize_t)-1))) __PYX_ERR(0, 75, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_AsWritableString(__pyx_v_string); if (unlikely((!__pyx_t_4) && PyErr_Occurred())) __PYX_ERR(0, 78, __pyx_L1_error)
+  __pyx_t_5 = PyObject_Length(__pyx_v_string); if (unlikely(__pyx_t_5 == ((Py_ssize_t)-1))) __PYX_ERR(0, 78, __pyx_L1_error)
   __pyx_v_res = __pyx_f_6cyluhn_cchecksum(__pyx_t_4, __pyx_t_5);
 
-  /* "cyluhn.pyx":76
+  /* "cyluhn.pyx":79
  * 
  *     res = cchecksum(string, len(string))
  *     if res == -1:             # <<<<<<<<<<<<<<
@@ -1968,20 +1972,20 @@ static PyObject *__pyx_pf_6cyluhn_8_checksum(CYTHON_UNUSED PyObject *__pyx_self,
   __pyx_t_1 = ((__pyx_v_res == -1L) != 0);
   if (unlikely(__pyx_t_1)) {
 
-    /* "cyluhn.pyx":77
+    /* "cyluhn.pyx":80
  *     res = cchecksum(string, len(string))
  *     if res == -1:
  *         raise ValueError('Input must be numeric')             # <<<<<<<<<<<<<<
  *     return res
  * 
  */
-    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple_, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 77, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple_, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 80, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_Raise(__pyx_t_3, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __PYX_ERR(0, 77, __pyx_L1_error)
+    __PYX_ERR(0, 80, __pyx_L1_error)
 
-    /* "cyluhn.pyx":76
+    /* "cyluhn.pyx":79
  * 
  *     res = cchecksum(string, len(string))
  *     if res == -1:             # <<<<<<<<<<<<<<
@@ -1990,7 +1994,7 @@ static PyObject *__pyx_pf_6cyluhn_8_checksum(CYTHON_UNUSED PyObject *__pyx_self,
  */
   }
 
-  /* "cyluhn.pyx":78
+  /* "cyluhn.pyx":81
  *     if res == -1:
  *         raise ValueError('Input must be numeric')
  *     return res             # <<<<<<<<<<<<<<
@@ -1998,13 +2002,13 @@ static PyObject *__pyx_pf_6cyluhn_8_checksum(CYTHON_UNUSED PyObject *__pyx_self,
  * 
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_res); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 78, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_res); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 81, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_r = __pyx_t_3;
   __pyx_t_3 = 0;
   goto __pyx_L0;
 
-  /* "cyluhn.pyx":71
+  /* "cyluhn.pyx":74
  * 
  * 
  * def _checksum(string):             # <<<<<<<<<<<<<<
@@ -2025,7 +2029,7 @@ static PyObject *__pyx_pf_6cyluhn_8_checksum(CYTHON_UNUSED PyObject *__pyx_self,
   return __pyx_r;
 }
 
-/* "cyluhn.pyx":81
+/* "cyluhn.pyx":84
  * 
  * 
  * cdef int cchecksum(char* string, Py_ssize_t stringsize):             # <<<<<<<<<<<<<<
@@ -2045,7 +2049,7 @@ static int __pyx_f_6cyluhn_cchecksum(char *__pyx_v_string, Py_ssize_t __pyx_v_st
   int __pyx_t_2;
   __Pyx_RefNannySetupContext("cchecksum", 0);
 
-  /* "cyluhn.pyx":82
+  /* "cyluhn.pyx":85
  * 
  * cdef int cchecksum(char* string, Py_ssize_t stringsize):
  *     cdef bint is_odd = 1             # <<<<<<<<<<<<<<
@@ -2054,7 +2058,7 @@ static int __pyx_f_6cyluhn_cchecksum(char *__pyx_v_string, Py_ssize_t __pyx_v_st
  */
   __pyx_v_is_odd = 1;
 
-  /* "cyluhn.pyx":83
+  /* "cyluhn.pyx":86
  * cdef int cchecksum(char* string, Py_ssize_t stringsize):
  *     cdef bint is_odd = 1
  *     cdef int odd_sum = 0             # <<<<<<<<<<<<<<
@@ -2063,7 +2067,7 @@ static int __pyx_f_6cyluhn_cchecksum(char *__pyx_v_string, Py_ssize_t __pyx_v_st
  */
   __pyx_v_odd_sum = 0;
 
-  /* "cyluhn.pyx":84
+  /* "cyluhn.pyx":87
  *     cdef bint is_odd = 1
  *     cdef int odd_sum = 0
  *     cdef int even_sum = 0             # <<<<<<<<<<<<<<
@@ -2072,7 +2076,7 @@ static int __pyx_f_6cyluhn_cchecksum(char *__pyx_v_string, Py_ssize_t __pyx_v_st
  */
   __pyx_v_even_sum = 0;
 
-  /* "cyluhn.pyx":86
+  /* "cyluhn.pyx":89
  *     cdef int even_sum = 0
  *     cdef int cur_digit
  *     cdef int i = stringsize - 1             # <<<<<<<<<<<<<<
@@ -2081,7 +2085,7 @@ static int __pyx_f_6cyluhn_cchecksum(char *__pyx_v_string, Py_ssize_t __pyx_v_st
  */
   __pyx_v_i = (__pyx_v_stringsize - 1);
 
-  /* "cyluhn.pyx":88
+  /* "cyluhn.pyx":91
  *     cdef int i = stringsize - 1
  * 
  *     while i > -1:             # <<<<<<<<<<<<<<
@@ -2092,7 +2096,7 @@ static int __pyx_f_6cyluhn_cchecksum(char *__pyx_v_string, Py_ssize_t __pyx_v_st
     __pyx_t_1 = ((__pyx_v_i > -1L) != 0);
     if (!__pyx_t_1) break;
 
-    /* "cyluhn.pyx":89
+    /* "cyluhn.pyx":92
  * 
  *     while i > -1:
  *         cur_digit = string[i] - ZERO_CHAR             # <<<<<<<<<<<<<<
@@ -2101,7 +2105,7 @@ static int __pyx_f_6cyluhn_cchecksum(char *__pyx_v_string, Py_ssize_t __pyx_v_st
  */
     __pyx_v_cur_digit = ((__pyx_v_string[__pyx_v_i]) - __pyx_v_6cyluhn_ZERO_CHAR);
 
-    /* "cyluhn.pyx":91
+    /* "cyluhn.pyx":94
  *         cur_digit = string[i] - ZERO_CHAR
  *         # print(cur_digit)
  *         if cur_digit < 0 or cur_digit > 9:             # <<<<<<<<<<<<<<
@@ -2119,7 +2123,7 @@ static int __pyx_f_6cyluhn_cchecksum(char *__pyx_v_string, Py_ssize_t __pyx_v_st
     __pyx_L6_bool_binop_done:;
     if (__pyx_t_1) {
 
-      /* "cyluhn.pyx":92
+      /* "cyluhn.pyx":95
  *         # print(cur_digit)
  *         if cur_digit < 0 or cur_digit > 9:
  *             return -1             # <<<<<<<<<<<<<<
@@ -2129,7 +2133,7 @@ static int __pyx_f_6cyluhn_cchecksum(char *__pyx_v_string, Py_ssize_t __pyx_v_st
       __pyx_r = -1;
       goto __pyx_L0;
 
-      /* "cyluhn.pyx":91
+      /* "cyluhn.pyx":94
  *         cur_digit = string[i] - ZERO_CHAR
  *         # print(cur_digit)
  *         if cur_digit < 0 or cur_digit > 9:             # <<<<<<<<<<<<<<
@@ -2138,7 +2142,7 @@ static int __pyx_f_6cyluhn_cchecksum(char *__pyx_v_string, Py_ssize_t __pyx_v_st
  */
     }
 
-    /* "cyluhn.pyx":94
+    /* "cyluhn.pyx":97
  *             return -1
  * 
  *         if is_odd:             # <<<<<<<<<<<<<<
@@ -2148,7 +2152,7 @@ static int __pyx_f_6cyluhn_cchecksum(char *__pyx_v_string, Py_ssize_t __pyx_v_st
     __pyx_t_1 = (__pyx_v_is_odd != 0);
     if (__pyx_t_1) {
 
-      /* "cyluhn.pyx":95
+      /* "cyluhn.pyx":98
  * 
  *         if is_odd:
  *             odd_sum += cur_digit             # <<<<<<<<<<<<<<
@@ -2157,7 +2161,7 @@ static int __pyx_f_6cyluhn_cchecksum(char *__pyx_v_string, Py_ssize_t __pyx_v_st
  */
       __pyx_v_odd_sum = (__pyx_v_odd_sum + __pyx_v_cur_digit);
 
-      /* "cyluhn.pyx":94
+      /* "cyluhn.pyx":97
  *             return -1
  * 
  *         if is_odd:             # <<<<<<<<<<<<<<
@@ -2167,7 +2171,7 @@ static int __pyx_f_6cyluhn_cchecksum(char *__pyx_v_string, Py_ssize_t __pyx_v_st
       goto __pyx_L8;
     }
 
-    /* "cyluhn.pyx":97
+    /* "cyluhn.pyx":100
  *             odd_sum += cur_digit
  *         else:
  *             cur_digit *= 2             # <<<<<<<<<<<<<<
@@ -2177,7 +2181,7 @@ static int __pyx_f_6cyluhn_cchecksum(char *__pyx_v_string, Py_ssize_t __pyx_v_st
     /*else*/ {
       __pyx_v_cur_digit = (__pyx_v_cur_digit * 2);
 
-      /* "cyluhn.pyx":98
+      /* "cyluhn.pyx":101
  *         else:
  *             cur_digit *= 2
  *             if cur_digit > 9:             # <<<<<<<<<<<<<<
@@ -2187,7 +2191,7 @@ static int __pyx_f_6cyluhn_cchecksum(char *__pyx_v_string, Py_ssize_t __pyx_v_st
       __pyx_t_1 = ((__pyx_v_cur_digit > 9) != 0);
       if (__pyx_t_1) {
 
-        /* "cyluhn.pyx":99
+        /* "cyluhn.pyx":102
  *             cur_digit *= 2
  *             if cur_digit > 9:
  *                 cur_digit -= 9             # <<<<<<<<<<<<<<
@@ -2196,7 +2200,7 @@ static int __pyx_f_6cyluhn_cchecksum(char *__pyx_v_string, Py_ssize_t __pyx_v_st
  */
         __pyx_v_cur_digit = (__pyx_v_cur_digit - 9);
 
-        /* "cyluhn.pyx":98
+        /* "cyluhn.pyx":101
  *         else:
  *             cur_digit *= 2
  *             if cur_digit > 9:             # <<<<<<<<<<<<<<
@@ -2205,7 +2209,7 @@ static int __pyx_f_6cyluhn_cchecksum(char *__pyx_v_string, Py_ssize_t __pyx_v_st
  */
       }
 
-      /* "cyluhn.pyx":100
+      /* "cyluhn.pyx":103
  *             if cur_digit > 9:
  *                 cur_digit -= 9
  *             even_sum += cur_digit             # <<<<<<<<<<<<<<
@@ -2216,7 +2220,7 @@ static int __pyx_f_6cyluhn_cchecksum(char *__pyx_v_string, Py_ssize_t __pyx_v_st
     }
     __pyx_L8:;
 
-    /* "cyluhn.pyx":102
+    /* "cyluhn.pyx":105
  *             even_sum += cur_digit
  * 
  *         is_odd = not is_odd             # <<<<<<<<<<<<<<
@@ -2225,7 +2229,7 @@ static int __pyx_f_6cyluhn_cchecksum(char *__pyx_v_string, Py_ssize_t __pyx_v_st
  */
     __pyx_v_is_odd = (!(__pyx_v_is_odd != 0));
 
-    /* "cyluhn.pyx":104
+    /* "cyluhn.pyx":107
  *         is_odd = not is_odd
  *         # print('odd = %d; even = %d' % (odd_sum, even_sum))
  *         i -= 1             # <<<<<<<<<<<<<<
@@ -2235,7 +2239,7 @@ static int __pyx_f_6cyluhn_cchecksum(char *__pyx_v_string, Py_ssize_t __pyx_v_st
     __pyx_v_i = (__pyx_v_i - 1);
   }
 
-  /* "cyluhn.pyx":106
+  /* "cyluhn.pyx":109
  *         i -= 1
  * 
  *     return (odd_sum + even_sum) % 10             # <<<<<<<<<<<<<<
@@ -2245,7 +2249,7 @@ static int __pyx_f_6cyluhn_cchecksum(char *__pyx_v_string, Py_ssize_t __pyx_v_st
   __pyx_r = __Pyx_mod_long((__pyx_v_odd_sum + __pyx_v_even_sum), 10);
   goto __pyx_L0;
 
-  /* "cyluhn.pyx":81
+  /* "cyluhn.pyx":84
  * 
  * 
  * cdef int cchecksum(char* string, Py_ssize_t stringsize):             # <<<<<<<<<<<<<<
@@ -2259,7 +2263,7 @@ static int __pyx_f_6cyluhn_cchecksum(char *__pyx_v_string, Py_ssize_t __pyx_v_st
   return __pyx_r;
 }
 
-/* "cyluhn.pyx":109
+/* "cyluhn.pyx":112
  * 
  * 
  * cdef char* cget_rand_numeric_str(int ndigits):             # <<<<<<<<<<<<<<
@@ -2275,7 +2279,7 @@ static char *__pyx_f_6cyluhn_cget_rand_numeric_str(int __pyx_v_ndigits) {
   int __pyx_t_1;
   __Pyx_RefNannySetupContext("cget_rand_numeric_str", 0);
 
-  /* "cyluhn.pyx":110
+  /* "cyluhn.pyx":113
  * 
  * cdef char* cget_rand_numeric_str(int ndigits):
  *     cdef char* out = <char*> malloc((ndigits + 1) * sizeof(char))             # <<<<<<<<<<<<<<
@@ -2284,7 +2288,7 @@ static char *__pyx_f_6cyluhn_cget_rand_numeric_str(int __pyx_v_ndigits) {
  */
   __pyx_v_out = ((char *)malloc(((__pyx_v_ndigits + 1) * (sizeof(char)))));
 
-  /* "cyluhn.pyx":111
+  /* "cyluhn.pyx":114
  * cdef char* cget_rand_numeric_str(int ndigits):
  *     cdef char* out = <char*> malloc((ndigits + 1) * sizeof(char))
  *     cdef int i = 0             # <<<<<<<<<<<<<<
@@ -2293,7 +2297,7 @@ static char *__pyx_f_6cyluhn_cget_rand_numeric_str(int __pyx_v_ndigits) {
  */
   __pyx_v_i = 0;
 
-  /* "cyluhn.pyx":113
+  /* "cyluhn.pyx":116
  *     cdef int i = 0
  * 
  *     while i < ndigits:             # <<<<<<<<<<<<<<
@@ -2304,7 +2308,7 @@ static char *__pyx_f_6cyluhn_cget_rand_numeric_str(int __pyx_v_ndigits) {
     __pyx_t_1 = ((__pyx_v_i < __pyx_v_ndigits) != 0);
     if (!__pyx_t_1) break;
 
-    /* "cyluhn.pyx":114
+    /* "cyluhn.pyx":117
  * 
  *     while i < ndigits:
  *         out[i] = rand() % 10 + ZERO_CHAR             # <<<<<<<<<<<<<<
@@ -2313,7 +2317,7 @@ static char *__pyx_f_6cyluhn_cget_rand_numeric_str(int __pyx_v_ndigits) {
  */
     (__pyx_v_out[__pyx_v_i]) = (__Pyx_mod_long(rand(), 10) + __pyx_v_6cyluhn_ZERO_CHAR);
 
-    /* "cyluhn.pyx":115
+    /* "cyluhn.pyx":118
  *     while i < ndigits:
  *         out[i] = rand() % 10 + ZERO_CHAR
  *         i += 1             # <<<<<<<<<<<<<<
@@ -2323,7 +2327,7 @@ static char *__pyx_f_6cyluhn_cget_rand_numeric_str(int __pyx_v_ndigits) {
     __pyx_v_i = (__pyx_v_i + 1);
   }
 
-  /* "cyluhn.pyx":116
+  /* "cyluhn.pyx":119
  *         out[i] = rand() % 10 + ZERO_CHAR
  *         i += 1
  *     out[ndigits] = 0             # <<<<<<<<<<<<<<
@@ -2332,7 +2336,7 @@ static char *__pyx_f_6cyluhn_cget_rand_numeric_str(int __pyx_v_ndigits) {
  */
   (__pyx_v_out[__pyx_v_ndigits]) = 0;
 
-  /* "cyluhn.pyx":118
+  /* "cyluhn.pyx":121
  *     out[ndigits] = 0
  * 
  *     return out             # <<<<<<<<<<<<<<
@@ -2342,7 +2346,7 @@ static char *__pyx_f_6cyluhn_cget_rand_numeric_str(int __pyx_v_ndigits) {
   __pyx_r = __pyx_v_out;
   goto __pyx_L0;
 
-  /* "cyluhn.pyx":109
+  /* "cyluhn.pyx":112
  * 
  * 
  * cdef char* cget_rand_numeric_str(int ndigits):             # <<<<<<<<<<<<<<
@@ -2356,7 +2360,7 @@ static char *__pyx_f_6cyluhn_cget_rand_numeric_str(int __pyx_v_ndigits) {
   return __pyx_r;
 }
 
-/* "cyluhn.pyx":121
+/* "cyluhn.pyx":124
  * 
  * 
  * def _get_rand_numeric_str(ndigits):             # <<<<<<<<<<<<<<
@@ -2400,7 +2404,7 @@ static PyObject *__pyx_pf_6cyluhn_10_get_rand_numeric_str(CYTHON_UNUSED PyObject
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("_get_rand_numeric_str", 0);
 
-  /* "cyluhn.pyx":124
+  /* "cyluhn.pyx":127
  *     cdef char* c_str
  * 
  *     try:             # <<<<<<<<<<<<<<
@@ -2409,17 +2413,17 @@ static PyObject *__pyx_pf_6cyluhn_10_get_rand_numeric_str(CYTHON_UNUSED PyObject
  */
   /*try:*/ {
 
-    /* "cyluhn.pyx":125
+    /* "cyluhn.pyx":128
  * 
  *     try:
  *         c_str = cget_rand_numeric_str(ndigits)             # <<<<<<<<<<<<<<
  *         if PY_MAJOR_VERSION < 3:
  *             return c_str[:ndigits]
  */
-    __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_ndigits); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 125, __pyx_L4_error)
+    __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_ndigits); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 128, __pyx_L4_error)
     __pyx_v_c_str = __pyx_f_6cyluhn_cget_rand_numeric_str(__pyx_t_1);
 
-    /* "cyluhn.pyx":126
+    /* "cyluhn.pyx":129
  *     try:
  *         c_str = cget_rand_numeric_str(ndigits)
  *         if PY_MAJOR_VERSION < 3:             # <<<<<<<<<<<<<<
@@ -2429,7 +2433,7 @@ static PyObject *__pyx_pf_6cyluhn_10_get_rand_numeric_str(CYTHON_UNUSED PyObject
     __pyx_t_2 = ((PY_MAJOR_VERSION < 3) != 0);
     if (__pyx_t_2) {
 
-      /* "cyluhn.pyx":127
+      /* "cyluhn.pyx":130
  *         c_str = cget_rand_numeric_str(ndigits)
  *         if PY_MAJOR_VERSION < 3:
  *             return c_str[:ndigits]             # <<<<<<<<<<<<<<
@@ -2443,17 +2447,17 @@ static PyObject *__pyx_pf_6cyluhn_10_get_rand_numeric_str(CYTHON_UNUSED PyObject
       if (__pyx_t_2) {
         __pyx_t_4 = PY_SSIZE_T_MAX;
       } else {
-        __pyx_t_5 = __Pyx_PyIndex_AsSsize_t(__pyx_t_3); if (unlikely((__pyx_t_5 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 127, __pyx_L4_error)
+        __pyx_t_5 = __Pyx_PyIndex_AsSsize_t(__pyx_t_3); if (unlikely((__pyx_t_5 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 130, __pyx_L4_error)
         __pyx_t_4 = __pyx_t_5;
       }
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-      __pyx_t_3 = __Pyx_PyBytes_FromStringAndSize(__pyx_v_c_str + 0, __pyx_t_4 - 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 127, __pyx_L4_error)
+      __pyx_t_3 = __Pyx_PyBytes_FromStringAndSize(__pyx_v_c_str + 0, __pyx_t_4 - 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 130, __pyx_L4_error)
       __Pyx_GOTREF(__pyx_t_3);
       __pyx_r = __pyx_t_3;
       __pyx_t_3 = 0;
       goto __pyx_L3_return;
 
-      /* "cyluhn.pyx":126
+      /* "cyluhn.pyx":129
  *     try:
  *         c_str = cget_rand_numeric_str(ndigits)
  *         if PY_MAJOR_VERSION < 3:             # <<<<<<<<<<<<<<
@@ -2462,7 +2466,7 @@ static PyObject *__pyx_pf_6cyluhn_10_get_rand_numeric_str(CYTHON_UNUSED PyObject
  */
     }
 
-    /* "cyluhn.pyx":129
+    /* "cyluhn.pyx":132
  *             return c_str[:ndigits]
  *         else:
  *             return c_str[:ndigits].decode()             # <<<<<<<<<<<<<<
@@ -2477,11 +2481,11 @@ static PyObject *__pyx_pf_6cyluhn_10_get_rand_numeric_str(CYTHON_UNUSED PyObject
       if (__pyx_t_2) {
         __pyx_t_4 = PY_SSIZE_T_MAX;
       } else {
-        __pyx_t_5 = __Pyx_PyIndex_AsSsize_t(__pyx_t_3); if (unlikely((__pyx_t_5 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 129, __pyx_L4_error)
+        __pyx_t_5 = __Pyx_PyIndex_AsSsize_t(__pyx_t_3); if (unlikely((__pyx_t_5 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 132, __pyx_L4_error)
         __pyx_t_4 = __pyx_t_5;
       }
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-      __pyx_t_3 = __Pyx_decode_c_string(__pyx_v_c_str, 0, __pyx_t_4, NULL, NULL, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 129, __pyx_L4_error)
+      __pyx_t_3 = __Pyx_decode_c_string(__pyx_v_c_str, 0, __pyx_t_4, NULL, NULL, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 132, __pyx_L4_error)
       __Pyx_GOTREF(__pyx_t_3);
       __pyx_r = __pyx_t_3;
       __pyx_t_3 = 0;
@@ -2489,7 +2493,7 @@ static PyObject *__pyx_pf_6cyluhn_10_get_rand_numeric_str(CYTHON_UNUSED PyObject
     }
   }
 
-  /* "cyluhn.pyx":131
+  /* "cyluhn.pyx":134
  *             return c_str[:ndigits].decode()
  *     finally:
  *         free(c_str)             # <<<<<<<<<<<<<<
@@ -2539,7 +2543,7 @@ static PyObject *__pyx_pf_6cyluhn_10_get_rand_numeric_str(CYTHON_UNUSED PyObject
     }
   }
 
-  /* "cyluhn.pyx":121
+  /* "cyluhn.pyx":124
  * 
  * 
  * def _get_rand_numeric_str(ndigits):             # <<<<<<<<<<<<<<
@@ -2558,7 +2562,7 @@ static PyObject *__pyx_pf_6cyluhn_10_get_rand_numeric_str(CYTHON_UNUSED PyObject
   return __pyx_r;
 }
 
-/* "cyluhn.pyx":134
+/* "cyluhn.pyx":137
  * 
  * 
  * def _cli_generate():             # <<<<<<<<<<<<<<
@@ -2599,101 +2603,101 @@ static PyObject *__pyx_pf_6cyluhn_12_cli_generate(CYTHON_UNUSED PyObject *__pyx_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("_cli_generate", 0);
 
-  /* "cyluhn.pyx":135
+  /* "cyluhn.pyx":138
  * 
  * def _cli_generate():
  *     import argparse             # <<<<<<<<<<<<<<
  * 
  *     parser = argparse.ArgumentParser(
  */
-  __pyx_t_1 = __Pyx_Import(__pyx_n_s_argparse, 0, -1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 135, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_Import(__pyx_n_s_argparse, 0, -1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 138, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_argparse = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "cyluhn.pyx":137
+  /* "cyluhn.pyx":140
  *     import argparse
  * 
  *     parser = argparse.ArgumentParser(             # <<<<<<<<<<<<<<
  *         description='Generate serial numbers with valid Luhn check digit')
  *     parser.add_argument('-d', '--ndigits', required=True, type=int,
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_argparse, __pyx_n_s_ArgumentParser); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 137, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_argparse, __pyx_n_s_ArgumentParser); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 140, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
 
-  /* "cyluhn.pyx":138
+  /* "cyluhn.pyx":141
  * 
  *     parser = argparse.ArgumentParser(
  *         description='Generate serial numbers with valid Luhn check digit')             # <<<<<<<<<<<<<<
  *     parser.add_argument('-d', '--ndigits', required=True, type=int,
  *                         help='Number of digits in each generated serial number')
  */
-  __pyx_t_2 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 138, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 141, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_description, __pyx_kp_s_Generate_serial_numbers_with_val) < 0) __PYX_ERR(0, 138, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_description, __pyx_kp_s_Generate_serial_numbers_with_val) < 0) __PYX_ERR(0, 141, __pyx_L1_error)
 
-  /* "cyluhn.pyx":137
+  /* "cyluhn.pyx":140
  *     import argparse
  * 
  *     parser = argparse.ArgumentParser(             # <<<<<<<<<<<<<<
  *         description='Generate serial numbers with valid Luhn check digit')
  *     parser.add_argument('-d', '--ndigits', required=True, type=int,
  */
-  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_empty_tuple, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 137, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_empty_tuple, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 140, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_parser = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "cyluhn.pyx":139
+  /* "cyluhn.pyx":142
  *     parser = argparse.ArgumentParser(
  *         description='Generate serial numbers with valid Luhn check digit')
  *     parser.add_argument('-d', '--ndigits', required=True, type=int,             # <<<<<<<<<<<<<<
  *                         help='Number of digits in each generated serial number')
  *     parser.add_argument('-n', '--nserials', required=True, type=int,
  */
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_parser, __pyx_n_s_add_argument); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 139, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_parser, __pyx_n_s_add_argument); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 142, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 139, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 142, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_required, Py_True) < 0) __PYX_ERR(0, 139, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_type, ((PyObject *)(&PyInt_Type))) < 0) __PYX_ERR(0, 139, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_help, __pyx_kp_s_Number_of_digits_in_each_generat) < 0) __PYX_ERR(0, 139, __pyx_L1_error)
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_tuple__2, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 139, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_required, Py_True) < 0) __PYX_ERR(0, 142, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_type, ((PyObject *)(&PyInt_Type))) < 0) __PYX_ERR(0, 142, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_help, __pyx_kp_s_Number_of_digits_in_each_generat) < 0) __PYX_ERR(0, 142, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_tuple__2, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 142, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "cyluhn.pyx":141
+  /* "cyluhn.pyx":144
  *     parser.add_argument('-d', '--ndigits', required=True, type=int,
  *                         help='Number of digits in each generated serial number')
  *     parser.add_argument('-n', '--nserials', required=True, type=int,             # <<<<<<<<<<<<<<
  *                         help='Number of serial numbers to generate')
  * 
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_parser, __pyx_n_s_add_argument); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 141, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_parser, __pyx_n_s_add_argument); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 144, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 141, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 144, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_required, Py_True) < 0) __PYX_ERR(0, 141, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_type, ((PyObject *)(&PyInt_Type))) < 0) __PYX_ERR(0, 141, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_help, __pyx_kp_s_Number_of_serial_numbers_to_gene) < 0) __PYX_ERR(0, 141, __pyx_L1_error)
-  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_tuple__3, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 141, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_required, Py_True) < 0) __PYX_ERR(0, 144, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_type, ((PyObject *)(&PyInt_Type))) < 0) __PYX_ERR(0, 144, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_help, __pyx_kp_s_Number_of_serial_numbers_to_gene) < 0) __PYX_ERR(0, 144, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_tuple__3, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 144, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "cyluhn.pyx":144
+  /* "cyluhn.pyx":147
  *                         help='Number of serial numbers to generate')
  * 
  *     args = parser.parse_args()             # <<<<<<<<<<<<<<
  *     for i in range(args.nserials):
  *         print(generate_valid_luhn_str(args.ndigits))
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_parser, __pyx_n_s_parse_args); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 144, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_parser, __pyx_n_s_parse_args); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 147, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_1 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -2707,21 +2711,21 @@ static PyObject *__pyx_pf_6cyluhn_12_cli_generate(CYTHON_UNUSED PyObject *__pyx_
   }
   __pyx_t_3 = (__pyx_t_1) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_1) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 144, __pyx_L1_error)
+  if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 147, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_args = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "cyluhn.pyx":145
+  /* "cyluhn.pyx":148
  * 
  *     args = parser.parse_args()
  *     for i in range(args.nserials):             # <<<<<<<<<<<<<<
  *         print(generate_valid_luhn_str(args.ndigits))
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_range); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 145, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_range); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 148, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_args, __pyx_n_s_nserials_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 145, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_args, __pyx_n_s_nserials_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 148, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -2736,16 +2740,16 @@ static PyObject *__pyx_pf_6cyluhn_12_cli_generate(CYTHON_UNUSED PyObject *__pyx_
   __pyx_t_3 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_1) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_1);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 145, __pyx_L1_error)
+  if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 148, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (likely(PyList_CheckExact(__pyx_t_3)) || PyTuple_CheckExact(__pyx_t_3)) {
     __pyx_t_2 = __pyx_t_3; __Pyx_INCREF(__pyx_t_2); __pyx_t_5 = 0;
     __pyx_t_6 = NULL;
   } else {
-    __pyx_t_5 = -1; __pyx_t_2 = PyObject_GetIter(__pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 145, __pyx_L1_error)
+    __pyx_t_5 = -1; __pyx_t_2 = PyObject_GetIter(__pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 148, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_6 = Py_TYPE(__pyx_t_2)->tp_iternext; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 145, __pyx_L1_error)
+    __pyx_t_6 = Py_TYPE(__pyx_t_2)->tp_iternext; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 148, __pyx_L1_error)
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   for (;;) {
@@ -2753,17 +2757,17 @@ static PyObject *__pyx_pf_6cyluhn_12_cli_generate(CYTHON_UNUSED PyObject *__pyx_
       if (likely(PyList_CheckExact(__pyx_t_2))) {
         if (__pyx_t_5 >= PyList_GET_SIZE(__pyx_t_2)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_3 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_5); __Pyx_INCREF(__pyx_t_3); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 145, __pyx_L1_error)
+        __pyx_t_3 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_5); __Pyx_INCREF(__pyx_t_3); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 148, __pyx_L1_error)
         #else
-        __pyx_t_3 = PySequence_ITEM(__pyx_t_2, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 145, __pyx_L1_error)
+        __pyx_t_3 = PySequence_ITEM(__pyx_t_2, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 148, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
         #endif
       } else {
         if (__pyx_t_5 >= PyTuple_GET_SIZE(__pyx_t_2)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_3 = PyTuple_GET_ITEM(__pyx_t_2, __pyx_t_5); __Pyx_INCREF(__pyx_t_3); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 145, __pyx_L1_error)
+        __pyx_t_3 = PyTuple_GET_ITEM(__pyx_t_2, __pyx_t_5); __Pyx_INCREF(__pyx_t_3); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 148, __pyx_L1_error)
         #else
-        __pyx_t_3 = PySequence_ITEM(__pyx_t_2, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 145, __pyx_L1_error)
+        __pyx_t_3 = PySequence_ITEM(__pyx_t_2, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 148, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
         #endif
       }
@@ -2773,7 +2777,7 @@ static PyObject *__pyx_pf_6cyluhn_12_cli_generate(CYTHON_UNUSED PyObject *__pyx_
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else __PYX_ERR(0, 145, __pyx_L1_error)
+          else __PYX_ERR(0, 148, __pyx_L1_error)
         }
         break;
       }
@@ -2782,14 +2786,14 @@ static PyObject *__pyx_pf_6cyluhn_12_cli_generate(CYTHON_UNUSED PyObject *__pyx_
     __Pyx_XDECREF_SET(__pyx_v_i, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "cyluhn.pyx":146
+    /* "cyluhn.pyx":149
  *     args = parser.parse_args()
  *     for i in range(args.nserials):
  *         print(generate_valid_luhn_str(args.ndigits))             # <<<<<<<<<<<<<<
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_generate_valid_luhn_str); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 146, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_generate_valid_luhn_str); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 149, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_args, __pyx_n_s_ndigits_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 146, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_args, __pyx_n_s_ndigits_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 149, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_t_7 = NULL;
     if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_1))) {
@@ -2804,15 +2808,15 @@ static PyObject *__pyx_pf_6cyluhn_12_cli_generate(CYTHON_UNUSED PyObject *__pyx_
     __pyx_t_3 = (__pyx_t_7) ? __Pyx_PyObject_Call2Args(__pyx_t_1, __pyx_t_7, __pyx_t_4) : __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_4);
     __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 146, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 149, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_print, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 146, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_print, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 149, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "cyluhn.pyx":145
+    /* "cyluhn.pyx":148
  * 
  *     args = parser.parse_args()
  *     for i in range(args.nserials):             # <<<<<<<<<<<<<<
@@ -2821,7 +2825,7 @@ static PyObject *__pyx_pf_6cyluhn_12_cli_generate(CYTHON_UNUSED PyObject *__pyx_
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "cyluhn.pyx":134
+  /* "cyluhn.pyx":137
  * 
  * 
  * def _cli_generate():             # <<<<<<<<<<<<<<
@@ -2897,6 +2901,7 @@ static struct PyModuleDef __pyx_moduledef = {
 
 static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_kp_s_0, __pyx_k_0, sizeof(__pyx_k_0), 0, 0, 1, 0},
+  {&__pyx_kp_s_0_1_3, __pyx_k_0_1_3, sizeof(__pyx_k_0_1_3), 0, 0, 1, 0},
   {&__pyx_n_s_ArgumentParser, __pyx_k_ArgumentParser, sizeof(__pyx_k_ArgumentParser), 0, 0, 1, 1},
   {&__pyx_kp_s_Generate_serial_numbers_with_val, __pyx_k_Generate_serial_numbers_with_val, sizeof(__pyx_k_Generate_serial_numbers_with_val), 0, 0, 1, 0},
   {&__pyx_kp_s_Input_must_be_numeric, __pyx_k_Input_must_be_numeric, sizeof(__pyx_k_Input_must_be_numeric), 0, 0, 1, 0},
@@ -2941,11 +2946,12 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_test, __pyx_k_test, sizeof(__pyx_k_test), 0, 0, 1, 1},
   {&__pyx_n_s_type, __pyx_k_type, sizeof(__pyx_k_type), 0, 0, 1, 1},
   {&__pyx_n_s_verify, __pyx_k_verify, sizeof(__pyx_k_verify), 0, 0, 1, 1},
+  {&__pyx_n_s_version, __pyx_k_version, sizeof(__pyx_k_version), 0, 0, 1, 1},
   {0, 0, 0, 0, 0, 0, 0}
 };
 static CYTHON_SMALL_CODE int __Pyx_InitCachedBuiltins(void) {
-  __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) __PYX_ERR(0, 77, __pyx_L1_error)
-  __pyx_builtin_print = __Pyx_GetBuiltinName(__pyx_n_s_print); if (!__pyx_builtin_print) __PYX_ERR(0, 146, __pyx_L1_error)
+  __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) __PYX_ERR(0, 80, __pyx_L1_error)
+  __pyx_builtin_print = __Pyx_GetBuiltinName(__pyx_n_s_print); if (!__pyx_builtin_print) __PYX_ERR(0, 149, __pyx_L1_error)
   return 0;
   __pyx_L1_error:;
   return -1;
@@ -2955,122 +2961,122 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "cyluhn.pyx":77
+  /* "cyluhn.pyx":80
  *     res = cchecksum(string, len(string))
  *     if res == -1:
  *         raise ValueError('Input must be numeric')             # <<<<<<<<<<<<<<
  *     return res
  * 
  */
-  __pyx_tuple_ = PyTuple_Pack(1, __pyx_kp_s_Input_must_be_numeric); if (unlikely(!__pyx_tuple_)) __PYX_ERR(0, 77, __pyx_L1_error)
+  __pyx_tuple_ = PyTuple_Pack(1, __pyx_kp_s_Input_must_be_numeric); if (unlikely(!__pyx_tuple_)) __PYX_ERR(0, 80, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple_);
   __Pyx_GIVEREF(__pyx_tuple_);
 
-  /* "cyluhn.pyx":139
+  /* "cyluhn.pyx":142
  *     parser = argparse.ArgumentParser(
  *         description='Generate serial numbers with valid Luhn check digit')
  *     parser.add_argument('-d', '--ndigits', required=True, type=int,             # <<<<<<<<<<<<<<
  *                         help='Number of digits in each generated serial number')
  *     parser.add_argument('-n', '--nserials', required=True, type=int,
  */
-  __pyx_tuple__2 = PyTuple_Pack(2, __pyx_kp_s_d, __pyx_kp_s_ndigits); if (unlikely(!__pyx_tuple__2)) __PYX_ERR(0, 139, __pyx_L1_error)
+  __pyx_tuple__2 = PyTuple_Pack(2, __pyx_kp_s_d, __pyx_kp_s_ndigits); if (unlikely(!__pyx_tuple__2)) __PYX_ERR(0, 142, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__2);
   __Pyx_GIVEREF(__pyx_tuple__2);
 
-  /* "cyluhn.pyx":141
+  /* "cyluhn.pyx":144
  *     parser.add_argument('-d', '--ndigits', required=True, type=int,
  *                         help='Number of digits in each generated serial number')
  *     parser.add_argument('-n', '--nserials', required=True, type=int,             # <<<<<<<<<<<<<<
  *                         help='Number of serial numbers to generate')
  * 
  */
-  __pyx_tuple__3 = PyTuple_Pack(2, __pyx_kp_s_n, __pyx_kp_s_nserials); if (unlikely(!__pyx_tuple__3)) __PYX_ERR(0, 141, __pyx_L1_error)
+  __pyx_tuple__3 = PyTuple_Pack(2, __pyx_kp_s_n, __pyx_kp_s_nserials); if (unlikely(!__pyx_tuple__3)) __PYX_ERR(0, 144, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__3);
   __Pyx_GIVEREF(__pyx_tuple__3);
 
-  /* "cyluhn.pyx":13
+  /* "cyluhn.pyx":16
  * 
  * 
  * def verify(string):             # <<<<<<<<<<<<<<
  *     """
  *     Check if the provided string of digits satisfies the Luhn checksum.
  */
-  __pyx_tuple__4 = PyTuple_Pack(1, __pyx_n_s_string); if (unlikely(!__pyx_tuple__4)) __PYX_ERR(0, 13, __pyx_L1_error)
+  __pyx_tuple__4 = PyTuple_Pack(1, __pyx_n_s_string); if (unlikely(!__pyx_tuple__4)) __PYX_ERR(0, 16, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__4);
   __Pyx_GIVEREF(__pyx_tuple__4);
-  __pyx_codeobj__5 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__4, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_cyluhn_pyx, __pyx_n_s_verify, 13, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__5)) __PYX_ERR(0, 13, __pyx_L1_error)
+  __pyx_codeobj__5 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__4, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_cyluhn_pyx, __pyx_n_s_verify, 16, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__5)) __PYX_ERR(0, 16, __pyx_L1_error)
 
-  /* "cyluhn.pyx":25
+  /* "cyluhn.pyx":28
  * 
  * 
  * def get_check_digit(string):             # <<<<<<<<<<<<<<
  *     """
  *     Generate the Luhn check digit to append to the provided string.
  */
-  __pyx_tuple__6 = PyTuple_Pack(1, __pyx_n_s_string); if (unlikely(!__pyx_tuple__6)) __PYX_ERR(0, 25, __pyx_L1_error)
+  __pyx_tuple__6 = PyTuple_Pack(1, __pyx_n_s_string); if (unlikely(!__pyx_tuple__6)) __PYX_ERR(0, 28, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__6);
   __Pyx_GIVEREF(__pyx_tuple__6);
-  __pyx_codeobj__7 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__6, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_cyluhn_pyx, __pyx_n_s_get_check_digit, 25, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__7)) __PYX_ERR(0, 25, __pyx_L1_error)
+  __pyx_codeobj__7 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__6, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_cyluhn_pyx, __pyx_n_s_get_check_digit, 28, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__7)) __PYX_ERR(0, 28, __pyx_L1_error)
 
-  /* "cyluhn.pyx":46
+  /* "cyluhn.pyx":49
  * 
  * 
  * def append_check_digit(string):             # <<<<<<<<<<<<<<
  *     """
  *     Append Luhn check digit to the end of the provided string. Returns a new
  */
-  __pyx_tuple__8 = PyTuple_Pack(1, __pyx_n_s_string); if (unlikely(!__pyx_tuple__8)) __PYX_ERR(0, 46, __pyx_L1_error)
+  __pyx_tuple__8 = PyTuple_Pack(1, __pyx_n_s_string); if (unlikely(!__pyx_tuple__8)) __PYX_ERR(0, 49, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__8);
   __Pyx_GIVEREF(__pyx_tuple__8);
-  __pyx_codeobj__9 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__8, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_cyluhn_pyx, __pyx_n_s_append_check_digit, 46, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__9)) __PYX_ERR(0, 46, __pyx_L1_error)
+  __pyx_codeobj__9 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__8, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_cyluhn_pyx, __pyx_n_s_append_check_digit, 49, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__9)) __PYX_ERR(0, 49, __pyx_L1_error)
 
-  /* "cyluhn.pyx":59
+  /* "cyluhn.pyx":62
  * 
  * 
  * def generate_valid_luhn_str(ndigits):             # <<<<<<<<<<<<<<
  *     """
  *     Generate a random numeric string of length `ndigits` with a valid luhn check digit
  */
-  __pyx_tuple__10 = PyTuple_Pack(1, __pyx_n_s_ndigits_2); if (unlikely(!__pyx_tuple__10)) __PYX_ERR(0, 59, __pyx_L1_error)
+  __pyx_tuple__10 = PyTuple_Pack(1, __pyx_n_s_ndigits_2); if (unlikely(!__pyx_tuple__10)) __PYX_ERR(0, 62, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__10);
   __Pyx_GIVEREF(__pyx_tuple__10);
-  __pyx_codeobj__11 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__10, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_cyluhn_pyx, __pyx_n_s_generate_valid_luhn_str, 59, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__11)) __PYX_ERR(0, 59, __pyx_L1_error)
+  __pyx_codeobj__11 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__10, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_cyluhn_pyx, __pyx_n_s_generate_valid_luhn_str, 62, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__11)) __PYX_ERR(0, 62, __pyx_L1_error)
 
-  /* "cyluhn.pyx":71
+  /* "cyluhn.pyx":74
  * 
  * 
  * def _checksum(string):             # <<<<<<<<<<<<<<
  *     if PY_MAJOR_VERSION > 2:
  *         string = bytes(string, 'ascii')
  */
-  __pyx_tuple__12 = PyTuple_Pack(2, __pyx_n_s_string, __pyx_n_s_res); if (unlikely(!__pyx_tuple__12)) __PYX_ERR(0, 71, __pyx_L1_error)
+  __pyx_tuple__12 = PyTuple_Pack(2, __pyx_n_s_string, __pyx_n_s_res); if (unlikely(!__pyx_tuple__12)) __PYX_ERR(0, 74, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__12);
   __Pyx_GIVEREF(__pyx_tuple__12);
-  __pyx_codeobj__13 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__12, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_cyluhn_pyx, __pyx_n_s_checksum, 71, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__13)) __PYX_ERR(0, 71, __pyx_L1_error)
+  __pyx_codeobj__13 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__12, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_cyluhn_pyx, __pyx_n_s_checksum, 74, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__13)) __PYX_ERR(0, 74, __pyx_L1_error)
 
-  /* "cyluhn.pyx":121
+  /* "cyluhn.pyx":124
  * 
  * 
  * def _get_rand_numeric_str(ndigits):             # <<<<<<<<<<<<<<
  *     cdef char* c_str
  * 
  */
-  __pyx_tuple__14 = PyTuple_Pack(2, __pyx_n_s_ndigits_2, __pyx_n_s_c_str); if (unlikely(!__pyx_tuple__14)) __PYX_ERR(0, 121, __pyx_L1_error)
+  __pyx_tuple__14 = PyTuple_Pack(2, __pyx_n_s_ndigits_2, __pyx_n_s_c_str); if (unlikely(!__pyx_tuple__14)) __PYX_ERR(0, 124, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__14);
   __Pyx_GIVEREF(__pyx_tuple__14);
-  __pyx_codeobj__15 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__14, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_cyluhn_pyx, __pyx_n_s_get_rand_numeric_str, 121, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__15)) __PYX_ERR(0, 121, __pyx_L1_error)
+  __pyx_codeobj__15 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__14, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_cyluhn_pyx, __pyx_n_s_get_rand_numeric_str, 124, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__15)) __PYX_ERR(0, 124, __pyx_L1_error)
 
-  /* "cyluhn.pyx":134
+  /* "cyluhn.pyx":137
  * 
  * 
  * def _cli_generate():             # <<<<<<<<<<<<<<
  *     import argparse
  * 
  */
-  __pyx_tuple__16 = PyTuple_Pack(4, __pyx_n_s_argparse, __pyx_n_s_parser, __pyx_n_s_args, __pyx_n_s_i); if (unlikely(!__pyx_tuple__16)) __PYX_ERR(0, 134, __pyx_L1_error)
+  __pyx_tuple__16 = PyTuple_Pack(4, __pyx_n_s_argparse, __pyx_n_s_parser, __pyx_n_s_args, __pyx_n_s_i); if (unlikely(!__pyx_tuple__16)) __PYX_ERR(0, 137, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__16);
   __Pyx_GIVEREF(__pyx_tuple__16);
-  __pyx_codeobj__17 = (PyObject*)__Pyx_PyCode_New(0, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__16, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_cyluhn_pyx, __pyx_n_s_cli_generate, 134, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__17)) __PYX_ERR(0, 134, __pyx_L1_error)
+  __pyx_codeobj__17 = (PyObject*)__Pyx_PyCode_New(0, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__16, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_cyluhn_pyx, __pyx_n_s_cli_generate, 137, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__17)) __PYX_ERR(0, 137, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -3393,85 +3399,94 @@ if (!__Pyx_RefNanny) {
   /* "cyluhn.pyx":13
  * 
  * 
+ * __version__ = '0.1.3'             # <<<<<<<<<<<<<<
+ * 
+ * 
+ */
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_version, __pyx_kp_s_0_1_3) < 0) __PYX_ERR(0, 13, __pyx_L1_error)
+
+  /* "cyluhn.pyx":16
+ * 
+ * 
  * def verify(string):             # <<<<<<<<<<<<<<
  *     """
  *     Check if the provided string of digits satisfies the Luhn checksum.
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_6cyluhn_1verify, NULL, __pyx_n_s_cyluhn); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 13, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_6cyluhn_1verify, NULL, __pyx_n_s_cyluhn); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 16, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_verify, __pyx_t_2) < 0) __PYX_ERR(0, 13, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_verify, __pyx_t_2) < 0) __PYX_ERR(0, 16, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "cyluhn.pyx":25
+  /* "cyluhn.pyx":28
  * 
  * 
  * def get_check_digit(string):             # <<<<<<<<<<<<<<
  *     """
  *     Generate the Luhn check digit to append to the provided string.
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_6cyluhn_3get_check_digit, NULL, __pyx_n_s_cyluhn); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 25, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_6cyluhn_3get_check_digit, NULL, __pyx_n_s_cyluhn); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 28, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_get_check_digit, __pyx_t_2) < 0) __PYX_ERR(0, 25, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_get_check_digit, __pyx_t_2) < 0) __PYX_ERR(0, 28, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "cyluhn.pyx":46
+  /* "cyluhn.pyx":49
  * 
  * 
  * def append_check_digit(string):             # <<<<<<<<<<<<<<
  *     """
  *     Append Luhn check digit to the end of the provided string. Returns a new
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_6cyluhn_5append_check_digit, NULL, __pyx_n_s_cyluhn); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 46, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_6cyluhn_5append_check_digit, NULL, __pyx_n_s_cyluhn); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 49, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_append_check_digit, __pyx_t_2) < 0) __PYX_ERR(0, 46, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_append_check_digit, __pyx_t_2) < 0) __PYX_ERR(0, 49, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "cyluhn.pyx":59
+  /* "cyluhn.pyx":62
  * 
  * 
  * def generate_valid_luhn_str(ndigits):             # <<<<<<<<<<<<<<
  *     """
  *     Generate a random numeric string of length `ndigits` with a valid luhn check digit
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_6cyluhn_7generate_valid_luhn_str, NULL, __pyx_n_s_cyluhn); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 59, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_6cyluhn_7generate_valid_luhn_str, NULL, __pyx_n_s_cyluhn); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 62, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_generate_valid_luhn_str, __pyx_t_2) < 0) __PYX_ERR(0, 59, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_generate_valid_luhn_str, __pyx_t_2) < 0) __PYX_ERR(0, 62, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "cyluhn.pyx":71
+  /* "cyluhn.pyx":74
  * 
  * 
  * def _checksum(string):             # <<<<<<<<<<<<<<
  *     if PY_MAJOR_VERSION > 2:
  *         string = bytes(string, 'ascii')
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_6cyluhn_9_checksum, NULL, __pyx_n_s_cyluhn); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 71, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_6cyluhn_9_checksum, NULL, __pyx_n_s_cyluhn); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 74, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_checksum, __pyx_t_2) < 0) __PYX_ERR(0, 71, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_checksum, __pyx_t_2) < 0) __PYX_ERR(0, 74, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "cyluhn.pyx":121
+  /* "cyluhn.pyx":124
  * 
  * 
  * def _get_rand_numeric_str(ndigits):             # <<<<<<<<<<<<<<
  *     cdef char* c_str
  * 
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_6cyluhn_11_get_rand_numeric_str, NULL, __pyx_n_s_cyluhn); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 121, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_6cyluhn_11_get_rand_numeric_str, NULL, __pyx_n_s_cyluhn); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 124, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_get_rand_numeric_str, __pyx_t_2) < 0) __PYX_ERR(0, 121, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_get_rand_numeric_str, __pyx_t_2) < 0) __PYX_ERR(0, 124, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "cyluhn.pyx":134
+  /* "cyluhn.pyx":137
  * 
  * 
  * def _cli_generate():             # <<<<<<<<<<<<<<
  *     import argparse
  * 
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_6cyluhn_13_cli_generate, NULL, __pyx_n_s_cyluhn); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 134, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_6cyluhn_13_cli_generate, NULL, __pyx_n_s_cyluhn); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 137, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_cli_generate, __pyx_t_2) < 0) __PYX_ERR(0, 134, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_cli_generate, __pyx_t_2) < 0) __PYX_ERR(0, 137, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
   /* "cyluhn.pyx":1

@@ -10,6 +10,9 @@ cdef char ZERO_CHAR = 48
 srand(time(NULL))
 
 
+__version__ = '0.1.3'
+
+
 def verify(string):
     """
     Check if the provided string of digits satisfies the Luhn checksum.
