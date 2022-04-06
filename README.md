@@ -63,26 +63,26 @@ cyluhn-generate -d 16 -n 10
 ## Runtime comparisons with luhn
 ```
 %timeit cyluhn.generate_valid_luhn_str(15)
-1.38 µs ± 8.93 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
+638 ns ± 1.1 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
 
 %timeit luhn.append(''.join(random.choices('0123456789', k=14)))
-7.14 µs ± 40.4 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+6.48 µs ± 15.8 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
 ---
 %timeit cyluhn.verify('136260325312871')
-475 ns ± 6.13 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
+192 ns ± 0.122 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
 
 %timeit luhn.verify('136260325312871')
-3.66 µs ± 77.6 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+3.26 µs ± 18.2 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
 ---
 %timeit cyluhn.get_check_digit('13626032531287')
-533 ns ± 4.35 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
+220 ns ± 1.1 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
 
 %timeit luhn.generate('13626032531287')
-3.64 µs ± 24.7 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+3.34 µs ± 13.7 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
 ---
 %timeit cyluhn.append_check_digit('13626032531287')
-719 ns ± 4.05 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
+367 ns ± 1.01 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
 
 %timeit luhn.append('13626032531287')
-3.88 µs ± 26.7 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+3.62 µs ± 15.6 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
 ```
