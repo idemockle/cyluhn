@@ -14,47 +14,71 @@ srand(time(NULL))
 
 def verify(string):
     """
-    Check if the provided string of digits satisfies the Luhn checksum.
+    Check if the provided string satisfies the Luhn checksum. If the
+    input string is non-numeric, empty, or None, verify() will return False.
 
     :param string: Numeric string
     :type string: str
     :return: True if the string passes Luhn check
     :rtype: bool
     """
-    return (_checksum(string) == 0)
+    if string is None or string == '':
+        return False
+
+    try:
+        return _checksum(string) == 0
+    except ValueError:
+        return False
 
 
 def get_check_digit(string):
     """
-    Generate the Luhn check digit to append to the provided string.
+    Generate the Luhn check digit to append to the provided string. If the
+    input string is non-numeric, empty, or None, a ValueError will be raised.
 
     :param string: Numeric string
     :type string: str
     :return: Check digit calculated from input
     :rtype: int
     """
+    if string is None or string == '':
+        raise ValueError('Null or empty input not allowed')
+
     if PY_MAJOR_VERSION > 2:
         string = bytes(string + '0', 'ascii')
     else:
         string += '0'
 
-    return cget_check_digit(string, len(string))
+    res = cget_check_digit(string, len(string))
+
+    _raise_valueerror_on_nonnumeric_input(res)
+
+    return res
 
 
 cdef int cget_check_digit(char* cstring, Py_ssize_t stringsize):
-    return (10 - cchecksum(cstring, stringsize)) % 10
+    cdef int checksum = cchecksum(cstring, stringsize)
+
+    if checksum == -1:
+        return -1
+    else:
+        return (10 - checksum) % 10
 
 
 def append_check_digit(string):
     """
     Append Luhn check digit to the end of the provided string. Returns a new
-    string with the appended digit.
+    string with the appended digit. If the input string is non-numeric, empty, 
+    or None, a ValueError will be raised.
 
     :param string: Numeric string
     :type string: str
     :return: Input string with calculated check digit appended
     :rtype: str
     """
+    if string is None or string == '':
+        raise ValueError('Null or empty input not allowed')
+
     return '%s%d' % (string, get_check_digit(string))
 
 
@@ -75,13 +99,13 @@ def _checksum(string):
         string = bytes(string, 'ascii')
 
     res = cchecksum(string, len(string))
-    if res == -1:
-        raise ValueError('Input must be numeric')
+    _raise_valueerror_on_nonnumeric_input(res)
+
     return res
 
 
 cdef int cchecksum(char* string, Py_ssize_t stringsize):
-    cdef bint is_odd = 1
+    cdef bint is_odd = True
     cdef int odd_sum = 0
     cdef int even_sum = 0
     cdef int cur_digit
@@ -146,3 +170,8 @@ def _cli_generate():
     while i < args.nserials:
         print(generate_valid_luhn_str(args.ndigits))
         i += 1
+
+
+def _raise_valueerror_on_nonnumeric_input(checksum_result):
+    if checksum_result == -1:
+        raise ValueError('Input must be numeric')
