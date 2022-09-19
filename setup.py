@@ -13,7 +13,7 @@ with io.open(os.path.abspath(os.path.join(__file__, '..', 'README.md')), 'r', en
 
 setup(
     name='cyluhn',
-    version='0.1.3',
+    version='0.2.0',
     description='Fast library to validate and generate check digits using the Luhn algorithm',
     long_description=readme_text,
     long_description_content_type='text/markdown',

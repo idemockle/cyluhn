@@ -5,7 +5,7 @@ from libc.time cimport time
 from cpython.version cimport PY_MAJOR_VERSION
 
 
-__version__ = '0.1.3'
+__version__ = '0.2.0'
 
 
 cdef char ZERO_CHAR = 48
@@ -45,9 +45,7 @@ def get_check_digit(string):
         raise ValueError('Null or empty input not allowed')
 
     if PY_MAJOR_VERSION > 2:
-        string = bytes(string + '0', 'ascii')
-    else:
-        string += '0'
+        string = bytes(string, 'ascii')
 
     res = cget_check_digit(string, len(string))
 
@@ -57,7 +55,7 @@ def get_check_digit(string):
 
 
 cdef int cget_check_digit(char* cstring, Py_ssize_t stringsize):
-    cdef int checksum = cchecksum(cstring, stringsize)
+    cdef int checksum = cchecksum(cstring, stringsize, False)
 
     if checksum == -1:
         return -1
@@ -98,14 +96,14 @@ def _checksum(string):
     if PY_MAJOR_VERSION > 2:
         string = bytes(string, 'ascii')
 
-    res = cchecksum(string, len(string))
+    res = cchecksum(string, len(string), True)
     _raise_valueerror_on_nonnumeric_input(res)
 
     return res
 
 
-cdef int cchecksum(char* string, Py_ssize_t stringsize):
-    cdef bint is_odd = True
+cdef int cchecksum(char* string, Py_ssize_t stringsize, bint last_digit_odd):
+    cdef bint is_odd = last_digit_odd
     cdef int odd_sum = 0
     cdef int even_sum = 0
     cdef int cur_digit
