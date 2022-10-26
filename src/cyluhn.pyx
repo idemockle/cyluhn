@@ -5,7 +5,7 @@ from libc.time cimport time
 from cpython.version cimport PY_MAJOR_VERSION
 
 
-__version__ = '0.2.0'
+__version__ = '0.2.1'
 
 
 cdef char ZERO_CHAR = 48
