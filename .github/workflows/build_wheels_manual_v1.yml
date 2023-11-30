@@ -3,90 +3,21 @@ name: Build (Manual)
 on: [workflow_dispatch]
 
 jobs:
-  build_wheels:
+  build_wheels_py312:
     name: Build wheels on ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-20.04, windows-2019, macos-10.15]
+        os: [ubuntu-20.04, windows-2019, macos-11]
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Build wheels
-        uses: pypa/cibuildwheel@v2.11.1
+        uses: pypa/cibuildwheel@v2.16.2
         env:
-          CIBW_SKIP: pp* # Why would you use a cython-based library in PyPy?
+          CIBW_BUILD: cp312*
 
       - uses: actions/upload-artifact@v2
         with:
           path: ./wheelhouse/*.whl
-
-  build_wheels_older_versions_non_win_plus_py35_win:
-    # Building of Python 2.7 wheels by cibuildwheel in Windows requires separate config and is in separate job below
-    name: Build old Python version wheels on ${{ matrix.os }}
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [ ubuntu-20.04, windows-2019, macos-10.15 ]
-
-    steps:
-      - uses: actions/checkout@v2
-
-      - name: Build wheels
-        uses: pypa/cibuildwheel@v1.12.0
-        env:
-          CIBW_BUILD: '{cp27*,cp35*}'
-          CIBW_BEFORE_BUILD: pip install Cython
-
-      - uses: actions/upload-artifact@v2
-        with:
-          path: ./wheelhouse/*.whl
-
-  build_wheels_py27_win:
-    name: Build Python 2.7 wheels on Windows
-    runs-on: windows-2019
-
-    steps:
-      - uses: actions/checkout@v2
-      
-      - uses: ilammy/msvc-dev-cmd@v1
-
-      - name: Build 64-bit wheel
-        uses: pypa/cibuildwheel@v1.12.0
-        env:
-          CIBW_BUILD: cp27-win_amd64
-          DISTUTILS_USE_SDK: 1
-          MSSdk: 1
-          CIBW_BEFORE_BUILD: pip install Cython
-
-      - uses: ilammy/msvc-dev-cmd@v1
-        with:
-          arch: x86
-
-      - name: Build 32-bit wheel
-        uses: pypa/cibuildwheel@v1.12.0
-        env:
-          CIBW_BUILD: cp27-win32
-          DISTUTILS_USE_SDK: 1
-          MSSdk: 1
-          CIBW_BEFORE_BUILD: pip install Cython
-          
-      - uses: actions/upload-artifact@v2
-        with:
-          path: ./wheelhouse/*.whl
-          
-  package_source:
-    name: Package source
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Set up Python
-        uses: actions/setup-python@v2
-      - name: Run sdist
-        run: |
-          pip install Cython
-          python setup.py sdist
-      - uses: actions/upload-artifact@v2
-        with:
-          path: ./dist/*.tar.gz
